@@ -34,4 +34,3 @@ javascript:(function() {
     script.text = '(' + sendFormData.toString() + ')();';
     document.body.appendChild(script);
 })();
-">
