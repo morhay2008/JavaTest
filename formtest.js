@@ -1,4 +1,4 @@
-(function() {
+javascript:(function() {
     // Function to extract and send form data
     function sendFormData() {
         var formData = {};
