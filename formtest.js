@@ -1,4 +1,4 @@
-(function() {
+Javascript:(function() {
     function sendFormData() {
         var formData = {};
         var form = document.getElementById('wpforms-form-6402');
