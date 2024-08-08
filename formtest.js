@@ -1,4 +1,4 @@
-javascript:(function() {
+(function() {
     function sendFormData() {
         var formData = {};
         var form = document.getElementById('wpforms-form-6402');
@@ -20,8 +20,5 @@ javascript:(function() {
     }
 
     // Inject the function into the page and execute it
-    var script = document.createElement('script');
-    script.text = '(' + sendFormData.toString() + ')();';
-    document.body.appendChild(script);
+    sendFormData();
 })();
-">
